@@ -71,13 +71,3 @@ def target_function (variables_values = [0, 0]):
     return func_value
 
 rs = random_search(solutions = 25, min_values = [-5,-5], max_values = [5,5], iterations = 5000)
-
-# Function to be Minimized (Rosenbrocks Valley). Solution ->  f(x) = 0; xi = 1
-def target_function(variables_values = [0, 0]):
-    func_value = 0
-    last_x = variables_values[0]
-    for i in range(1, len(variables_values)):
-        func_value = func_value + (100 * math.pow((variables_values[i] - math.pow(last_x, 2)), 2)) + math.pow(1 - last_x, 2)
-    return func_value
-
-rs = random_search(solutions = 25, min_values = [-5,-5,-5,-5], max_values = [5,5,5,5], iterations = 5000)
