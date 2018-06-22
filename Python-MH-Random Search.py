@@ -55,8 +55,7 @@ def random_search(solutions = 5, min_values = [-5,-5], max_values = [5,5], itera
         position = update_position(position, min_values = min_values, max_values = max_values)
         if(position.iloc[position['Fitness'].idxmin(),-1] < best_solution[-1] ):
             for j in range(0, position.shape[1]):
-                best_solution[j] = position.iloc[position['Fitness'].idxmin(),j]
-        
+                best_solution[j] = position.iloc[position['Fitness'].idxmin(),j]      
         
         count = count + 1 
         
