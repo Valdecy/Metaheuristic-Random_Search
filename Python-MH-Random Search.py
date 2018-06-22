@@ -60,8 +60,8 @@ def random_search(solutions = 5, min_values = [-5,-5], max_values = [5,5], itera
         
         count = count + 1 
         
-    print(position.iloc[position['Fitness'].idxmin(),:].copy(deep = True))    
-    return position.iloc[position['Fitness'].idxmin(),:].copy(deep = True)
+    print(best_solution)    
+    return best_solution
 
 ######################## Part 1 - Usage ####################################
 
